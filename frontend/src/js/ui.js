@@ -5,7 +5,8 @@ export function displayPopRanking(popRanking) {
 			artist => `
     <li>
       <span class="artist-name">${artist.artist_name}</span>
-      <span class="artist-followers">${artist.followers.toLocaleString()} seguidores</span>
+      <span class="artist-followers">Seguidores: ${artist.followers.toLocaleString()}</span>
+			<span class="artist-popularity">Índice: ${artist.popularity}</span>
     </li>
   `
 		)
