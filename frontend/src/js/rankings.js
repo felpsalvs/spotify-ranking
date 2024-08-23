@@ -1,11 +1,11 @@
 export function createPopRanking(artists) {
 	return artists
-		.filter(artist => artist.genres.includes("pop"))
-		.sort((a, b) => b.followers.total - a.followers.total)
-		.map(artist => ({
+	.sort((a, b) => b.followers.total - a.followers.total)
+	.map(artist => ({
 			artist_name: artist.name,
 			followers: artist.followers.total,
-		}))
+			popularity: artist.popularity,
+	}));
 }
 
 export function createGenreRanking(artists) {
