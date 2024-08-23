@@ -1,7 +1,9 @@
-require("dotenv").config()
-const express = require("express")
-const axios = require("axios")
-const cors = require("cors")
+import dotenv from 'dotenv';
+import cors from "cors"
+import express from "express"
+import axios from "axios"
+
+dotenv.config();
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -72,7 +74,7 @@ app.get("/api/artists", async (req, res) => {
 				},
 			}
 		)
-
+		
 		const accessToken = tokenResponse.data.access_token
 		console.log("Access Token:", accessToken)
 
